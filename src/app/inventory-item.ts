@@ -5,6 +5,7 @@ export class InventoryItem {
   length: number;
   height: number;
   depth: number;
+  state: boolean = false;
 
   private _volume = 0;
   public get volume(): number {
@@ -12,7 +13,9 @@ export class InventoryItem {
     return this._volume;
   }
 
-
+  toggleState(): void {
+    this.state = !this.state;
+  }
   constructor(id, name, quantity, length, height, depth) {
     this.id = id;
     this.name = name;

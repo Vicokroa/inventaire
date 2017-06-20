@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { InventoryItem } from "./inventory-item";
 import { Room } from "./room";
 
@@ -38,7 +39,8 @@ var ROOMS: Room[] = [
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  
 })
 
 

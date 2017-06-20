@@ -5,7 +5,7 @@ import { InventoryItem } from "./inventory-item";
 @Component({
     selector: 'app-room-inventory',
     templateUrl: 'room-inventory.component.html',
-    styleUrls: ['./room-inventory.component.css']
+    styleUrls: ['./room-inventory.component.css'],
 })
 
 export class RoomInventoryComponent {

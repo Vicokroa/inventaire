@@ -1,0 +1,21 @@
+<ul *ngIf="inventoryItemCollection.length" class="item-collection">
+
+    <li *ngFor=" let item of inventoryItemCollection" [class.selected]="item === selectedItem" class="item">
+        <!-- Liste des éléments -->
+        <img src="https://www.emoovz.com/uploads/item/images/57ca2acbe28edeb7b366b88957920de31872af93.png" />
+        <div class="item-etiq">
+            <label class="item-name">{{item.name}}</label>
+            <br/>
+            <label class="item-info">{{item.length}}&times;{{item.height}}&times;{{item.depth}}</label>
+            <span class="item-legend">(l&times;h&times;L)</span>
+        </div>
+        <div class="item-quantity">
+            <button type="button" (click)="removeOne(item)">-</button><span>{{item.quantity}}</span><button type="button"
+                (click)="addOne(item)">+</button>
+        </div>
+    </li>
+</ul>
+
+<p *ngIf="inventoryItemCollection.length === 0" class="item-collection">
+    Aucun objet à afficher
+</p>

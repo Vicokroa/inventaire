@@ -1,0 +1,42 @@
+* {
+  font-family: 'Helvetica Neue', Arial, sans-serif
+}
+
+.action-bar {
+  text-align: right;
+  width: 850px;
+}
+
+.action-bar button {
+  background: none;
+  border: 2px solid #E74891;
+  border-radius: 5px;
+  color: #E74891;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+}
+  .inventory-section {
+    display: inline-block;
+    width: 850px;
+    vertical-align: top;
+    background-color: #EBEAF2;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .resume-inventory-section {
+    display: inline-block;
+    width: 400px;
+    height: 600px;
+    background-color: #EBEAF2;
+    margin-top: 10px;
+  }
+
+  .room-list {
+    list-style: none;
+  }
+
+  .room-collection {
+    list-style: none;
+  }

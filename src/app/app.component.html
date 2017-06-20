@@ -36,13 +36,15 @@
 <div class="resume-inventory-section">
   <h3>Résumé</h3>
   <ul>
-  <li *ngFor="let room of inventoryRooms">
-    {{room.name}}
+    <ng-container *ngFor="let room of inventoryRooms">
+  <li *ngIf="room.displayToResume">
+    <b>{{room.name}} => {{room.volume}}</b>
     <dl>
       <dt *ngFor="let item of room.inventoryForResume">
-        {{item.name}} &times; {{item.quantity}}
+        {{item.name}} &times; {{item.quantity}} => {{item.volume}}
       </dt>
     </dl>
   </li>
+    </ng-container>
   </ul>
 </div>

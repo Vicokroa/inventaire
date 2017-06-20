@@ -15,6 +15,7 @@ export class RoomInventoryComponent {
         item.quantity++;
     }
 
+
     removeOne(item: InventoryItem): void {
         item.quantity > 0 ? item.quantity-- : item.quantity = 0;
     }

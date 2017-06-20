@@ -6,6 +6,12 @@ export class InventoryItem {
   height: number;
   depth: number;
 
+  private _volume = 0;
+  public get volume(): number {
+    this._volume = Math.round((this.quantity * (this.height * this.length * this.depth / 1000000)) * 100)/100;
+    return this._volume;
+  }
+
 
   constructor(id, name, quantity, length, height, depth) {
     this.id = id;

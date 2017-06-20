@@ -12,7 +12,7 @@ export class InventoryItemService {
      */
     getVolume(items: InventoryItem[]): number {
         var result: number = 0;
-        items.forEach(item => result += Math.round((item.quantity * (item.height * item.length * item.depth / 100000)) * 100)/100);
+        items.forEach(item => result += item.volume);
         return result;
     }
 }

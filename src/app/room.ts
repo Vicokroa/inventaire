@@ -5,45 +5,41 @@ export class Room {
     id: number;
     name: string;
     inventoryItemCollection: InventoryItem[];
-    private _volume: string = '0';
 
+    private _volume: string = '0';
     public get volume() : string {
         var result: number = 0;
         this.inventoryItemCollection.forEach(item => {
             result += Math.round((item.quantity * (item.height * item.length * item.depth / 1000000)) * 100)/100;
         });
-        return result.toFixed(2);
+        this._volume = result.toFixed(2);
+        return this._volume;
 
     }
 
-
-    
     private _itemQuantity: number = 0
-    
     public get itemQuantity() : number {
-        var result: number = 0;
+
+        this._itemQuantity = 0;
         this.inventoryItemCollection.forEach(item => {
-            result += item.quantity;
+            this._itemQuantity += item.quantity;
         });
-        return result;
+        return this._itemQuantity;
     }
 
     private _DisplayToResume: boolean = false;
-    
     public get displayToResume() : boolean {
-        return this.inventoryItemCollection.some(item => item.quantity > 0);
+        this._DisplayToResume = this.inventoryItemCollection.some(item => item.quantity > 0);
+        return this._DisplayToResume;
     }
     
     private _inventoryForResume: InventoryItem[];
-    
     public get inventoryForResume() : InventoryItem[] {
-        return this.inventoryItemCollection.filter(item => item.quantity > 0);
+        this._inventoryForResume =  this.inventoryItemCollection.filter(item => item.quantity > 0);
+        return this._inventoryForResume;
     }
-    
-    
-    
 
-
+    
     constructor(id: number, name: string, inventoryItems: InventoryItem[]) {
         this.id = id;
         this.name = name;

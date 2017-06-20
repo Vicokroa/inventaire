@@ -10,7 +10,7 @@ export class Room {
     public get volume() : string {
         var result: number = 0;
         this.inventoryItemCollection.forEach(item => {
-            result += Math.round((item.quantity * (item.height * item.length * item.depth / 1000000)) * 100)/100;
+            result += item.volume;
         });
         this._volume = result.toFixed(2);
         return this._volume;
@@ -39,7 +39,7 @@ export class Room {
         return this._inventoryForResume;
     }
 
-    
+
     constructor(id: number, name: string, inventoryItems: InventoryItem[]) {
         this.id = id;
         this.name = name;

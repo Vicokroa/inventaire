@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms";
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { InventoryItemDetailComponent } from "./inventoty-item-detail.component";
-import { RoomInventoryComponent } from "./room-inventory.component";
-import { FilterItemPipe } from "./filter-item.pipe";
+import { InventoryItemDetailComponent } from './inventoty-item-detail.component';
+import { RoomInventoryComponent } from './room-inventory.component';
+import { FilterItemPipe } from './filter-item.pipe';
 
-import { InventoryItemService } from "./inventory-item.service";
+import { InventoryItemService } from './inventory-item.service';
 
 @NgModule({
   declarations: [

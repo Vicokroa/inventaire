@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { InventoryItem } from "./inventory-item";
+import { InventoryItem } from './inventory-item';
 
 @Injectable()
 export class InventoryItemService {
@@ -11,7 +11,7 @@ export class InventoryItemService {
      * @return {number}                Retroune le volume total de la collection
      */
     getVolume(items: InventoryItem[]): number {
-        var result: number = 0;
+        let result = 0;
         items.forEach(item => result += item.volume);
         return result;
     }

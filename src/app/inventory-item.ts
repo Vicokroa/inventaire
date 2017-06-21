@@ -5,11 +5,11 @@ export class InventoryItem {
   length: number;
   height: number;
   depth: number;
-  state: boolean = false;
+  state = false;
 
   private _volume = 0;
   public get volume(): number {
-    this._volume = Math.round((this.quantity * (this.height * this.length * this.depth / 1000000)) * 100)/100;
+    this._volume = Math.round((this.quantity * (this.height * this.length * this.depth / 1000000)) * 100) / 100;
     return this._volume;
   }
 

@@ -20,6 +20,10 @@ const INVENTORYITEMS: InventoryItem[] = [
   new InventoryItem(21, 'Meulbe bas', 0,  63,  52,  31 )
 ];
 
+/**
+ * Fonction de copy d'un collection d'item
+ * @param inventory {InventoryItem[]} Collection d'items à copier
+ */
 function copy(inventory: InventoryItem[]): InventoryItem[] {
   const result = []
   inventory.forEach(item =>

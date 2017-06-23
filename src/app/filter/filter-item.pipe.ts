@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { InventoryItem } from './inventory-item';
+import { InventoryItem } from '../model/inventory-item';
 
 @Pipe({
     name: 'filterItem'

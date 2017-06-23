@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { InventoryItem } from './inventory-item';
-import { Room } from './room';
+import { InventoryItem } from './model/inventory-item';
+import { Room } from './model/room';
 
 
 

@@ -1,5 +1,5 @@
 import { InventoryItem } from './inventory-item';
-import { InventoryItemService } from './inventory-item.service';
+import { InventoryItemService } from '../service/inventory-item.service';
 
 export class Room {
     id: number;

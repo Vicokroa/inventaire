@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { InventoryItem } from './inventory-item';
+import { InventoryItem } from './model/inventory-item';
 
 @Component({
     selector: 'app-inventory-item-detail',

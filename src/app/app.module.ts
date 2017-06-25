@@ -18,7 +18,7 @@ import { InventoryItemService } from './service/inventory-item.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [InventoryItemService],
   bootstrap: [AppComponent]

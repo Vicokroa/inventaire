@@ -42,10 +42,16 @@ export class InventoryItemService {
         return result;
     }
 
+    /**
+     * Retourne la collection des Items
+     */
     getInventoryItems(): Promise<InventoryItem[]> {
         return Promise.resolve(INVENTORYITEMS);
     }
 
+    /**
+     * Retourne la collection des pièces
+     */
     getRooms(): Promise<Room[]> {
         const tmpRooms = ROOMS;
         tmpRooms.forEach(room => room.inventoryItemCollection = this.copy(INVENTORYITEMS));

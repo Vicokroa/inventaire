@@ -22,7 +22,7 @@
 
   <li *ngFor="let room of inventoryRooms">
 
-    <h3><span (click)="onRoomRemove(room)">&times;</span> <span (click)="onRoomChoice(room)">{{room.name}}</span> => Quantité: {{room.itemQuantity}}; Volume: {{room.volume}} m<sup>3</sup></h3>
+    <h3><span (click)="onRoomRemove(room)">&times;</span> <span (click)="onRoomChoice(room)">{{room.name}}</span> =&gt; Quantité: {{room.itemQuantity}}; Volume: {{room.volume}} m<sup>3</sup></h3>
 
 
 
@@ -39,10 +39,10 @@
   <ul>
     <ng-container *ngFor="let room of inventoryRooms">
   <li *ngIf="room.displayToResume">
-    <b>{{room.name}} => {{room.volume}}</b>
+    <b>{{room.name}} =&gt; {{room.volume}}</b>
     <dl>
       <dt *ngFor="let item of room.inventoryForResume">
-        {{item.name}} &times; {{item.quantity}} => {{item.volume}}
+        {{item.name}} &times; {{item.quantity}} =&gt; {{item.volume}}
       </dt>
     </dl>
   </li>

@@ -5,6 +5,7 @@ export class InventoryItem {
   length: number;
   height: number;
   depth: number;
+  custom = false;
   state = false;
 
   private _volume = 0;

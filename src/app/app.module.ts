@@ -24,5 +24,4 @@ import { InventoryItemService } from './service/inventory-item.service';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private inventoryItemService: InventoryItemService) {}
  }

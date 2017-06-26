@@ -71,7 +71,7 @@ export class AppComponent {
     room.inventoryItemCollection.forEach(item => item.quantity = 0);
     this.rooms.push(room);
     this.inventoryRooms.splice(this.inventoryRooms.indexOf(room), 1);
-    this.rooms.sort(function(a: Room, b: Room){ return a.id - b.id});
+    this.rooms.sort(function (a: Room, b: Room) { return a.id - b.id });
   }
 
 
